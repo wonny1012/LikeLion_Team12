@@ -2,7 +2,7 @@
 
 ## Commit Convention
 |Gitmoji|Tag|Detail|
-|:-:|:-:|:-|
+|:-:|:-|:-|
 |✨|Feat:|새로운 기능을 추가|
 |🐞|Fix:|버그를 수정|
 |♻️|Refactor:|Production 코드 리펙토링|
