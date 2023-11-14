@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EunsuView: View {
-    @StateObject var vm = PokemonViewModel()
+    @EnvironmentObject var pokemonVM: PokemonViewModel
     
     private let adaptveColumns = [
         GridItem(.adaptive(minimum: 150)) //앱을 가로로 돌리면 줄이 눌어난다.
@@ -18,22 +18,21 @@ struct EunsuView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: adaptveColumns, spacing: 10) {
-                    ForEach(vm.filteredPokemon) { pokemon in
+                    ForEach(pokemonVM.filteredPokemon) { pokemon in
                         NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
                             PokemonView(pokemon: pokemon)
                         }
                     }
                 }
-                .animation(.easeIn(duration: 0.3), value: vm.filteredPokemon.count) //value의 값이 바뀌면 aninmation이 작동한다.
+                .animation(.easeIn(duration: 0.3), value: pokemonVM.filteredPokemon.count) //value의 값이 바뀌면 aninmation이 작동한다.
                 .navigationTitle("PokemonUI")
                 .navigationBarTitleDisplayMode(.inline)
             }
-            .searchable(text: $vm.searchText)
+            .searchable(text: $pokemonVM.searchText)
         }
-        .environmentObject(vm)
     }
 }
 
 #Preview {
-    EunsuView()
+    EunsuView().environmentObject(PokemonViewModel())
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var pokemonVM = PokemonViewModel()
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 30) {
@@ -41,6 +43,7 @@ struct ContentView: View {
                 Spacer()
             }
         }
+        .environmentObject(pokemonVM)
     }
 }
 
