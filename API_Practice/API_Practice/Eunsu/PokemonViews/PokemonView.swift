@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct PokemonView: View {
-    @EnvironmentObject var vm: PokemonViewModel
+    @EnvironmentObject var pokemonVM: PokemonViewModel
     let pokemon: Pokemon
     let dimensions: Double = 140
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(vm.getPokemonIndex(pokemon: pokemon)).png")) { image in
+            AsyncImage(url: URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(pokemonVM.getPokemonIndex(pokemon: pokemon)).png")) { image in
                     image
                         .resizable()
                         .scaledToFit()

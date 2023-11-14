@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PokemonDetailView: View {
-    @EnvironmentObject var vm: PokemonViewModel //이미 존재하는 것을 언급하는것이므로 초기화하지 않는다.
+    @EnvironmentObject var pokemonVM: PokemonViewModel //이미 존재하는 것을 언급하는것이므로 초기화하지 않는다.
     let pokemon: Pokemon
     
     var body: some View {
@@ -16,13 +16,13 @@ struct PokemonDetailView: View {
             PokemonView(pokemon: pokemon)
             
             VStack(spacing: 10) {
-                Text("**ID**: \(vm.pokemonDetails?.id ?? 0)")
-                Text("**Weight**: \(vm.formatHW(value: vm.pokemonDetails?.weight ?? 0)) kg")
-                Text("**Height**: \(vm.formatHW(value: vm.pokemonDetails?.height ?? 0)) m")
+                Text("**ID**: \(pokemonVM.pokemonDetails?.id ?? 0)")
+                Text("**Weight**: \(pokemonVM.formatHW(value: pokemonVM.pokemonDetails?.weight ?? 0)) kg")
+                Text("**Height**: \(pokemonVM.formatHW(value: pokemonVM.pokemonDetails?.height ?? 0)) m")
             }
         }
         .onAppear {
-            vm.getDetails(pokemon: pokemon)
+            pokemonVM.getDetails(pokemon: pokemon)
         }
     }
 }
