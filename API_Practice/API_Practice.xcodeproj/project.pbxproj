@@ -12,6 +12,8 @@
 		0EC790122AFFE2CB00B1F687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC790112AFFE2CB00B1F687 /* Assets.xcassets */; };
 		0EC790152AFFE2CB00B1F687 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC790142AFFE2CB00B1F687 /* Preview Assets.xcassets */; };
 		0EC7901E2AFFEA7E00B1F687 /* JiwonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */; };
+		9E6EAC452B02719200A7A7BD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAC432B02719200A7A7BD /* README.md */; };
+		9E6EAC462B02719200A7A7BD /* 환경세팅.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAC442B02719200A7A7BD /* 환경세팅.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		0EC790112AFFE2CB00B1F687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EC790142AFFE2CB00B1F687 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiwonView.swift; sourceTree = "<group>"; };
+		9E6EAC432B02719200A7A7BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9E6EAC442B02719200A7A7BD /* 환경세팅.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "환경세팅.txt"; path = "../환경세팅.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,8 @@
 		0EC790012AFFE2CA00B1F687 = {
 			isa = PBXGroup;
 			children = (
+				9E6EAC442B02719200A7A7BD /* 환경세팅.txt */,
+				9E6EAC432B02719200A7A7BD /* README.md */,
 				0EC7900C2AFFE2CA00B1F687 /* API_Practice */,
 				0EC7900B2AFFE2CA00B1F687 /* Products */,
 			);
@@ -128,6 +134,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E6EAC462B02719200A7A7BD /* 환경세팅.txt in Resources */,
+				9E6EAC452B02719200A7A7BD /* README.md in Resources */,
 				0EC790152AFFE2CB00B1F687 /* Preview Assets.xcassets in Resources */,
 				0EC790122AFFE2CB00B1F687 /* Assets.xcassets in Resources */,
 			);
