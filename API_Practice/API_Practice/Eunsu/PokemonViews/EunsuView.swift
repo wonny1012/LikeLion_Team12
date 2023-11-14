@@ -24,7 +24,11 @@ struct EunsuView: View {
                         }
                     }
                 }
+                .animation(.easeIn(duration: 0.3), value: vm.filteredPokemon.count) //value의 값이 바뀌면 aninmation이 작동한다.
+                .navigationTitle("PokemonUI")
+                .navigationBarTitleDisplayMode(.inline)
             }
+            .searchable(text: $vm.searchText)
         }
         .environmentObject(vm)
     }
