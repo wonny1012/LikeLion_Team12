@@ -44,6 +44,6 @@ extension Bundle {
             } catch {
                 failure(error)
             }
-        }
+        }.resume()
     }
 }
