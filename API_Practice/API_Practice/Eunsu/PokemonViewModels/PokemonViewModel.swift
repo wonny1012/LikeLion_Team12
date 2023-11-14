@@ -23,6 +23,6 @@ final class ViewModel: ObservableObject {
     
     init() {
         self.pokemonList = pokemonManager.getPokemon()
-        print(self.pokemonList)
+//        print(self.pokemonList)
     }
 }
