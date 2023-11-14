@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class ViewModel: ObservableObject {
+final class PokemonViewModel: ObservableObject {
     private let pokemonManager = PokemonManager()
     
     @Published var pokemonList = [Pokemon]()

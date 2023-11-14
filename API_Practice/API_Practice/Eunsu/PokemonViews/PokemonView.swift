@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PokemonView: View {
-    @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var vm: PokemonViewModel
     let pokemon: Pokemon
     let dimensions: Double = 140
     

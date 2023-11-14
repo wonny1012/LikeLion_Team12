@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PokemonDetailView: View {
-    @EnvironmentObject var vm: ViewModel //이미 존재하는 것을 언급하는것이므로 초기화하지 않는다.
+    @EnvironmentObject var vm: PokemonViewModel //이미 존재하는 것을 언급하는것이므로 초기화하지 않는다.
     let pokemon: Pokemon
     
     var body: some View {

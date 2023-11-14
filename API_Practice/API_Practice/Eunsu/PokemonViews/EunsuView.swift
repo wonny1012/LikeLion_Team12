@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EunsuView: View {
-    @StateObject var vm = ViewModel()
+    @StateObject var vm = PokemonViewModel()
     
     private let adaptveColumns = [
         GridItem(.adaptive(minimum: 150)) //앱을 가로로 돌리면 줄이 눌어난다.
