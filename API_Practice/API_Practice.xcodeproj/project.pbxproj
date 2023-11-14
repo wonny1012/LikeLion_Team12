@@ -14,6 +14,7 @@
 		0EC7901E2AFFEA7E00B1F687 /* JiwonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */; };
 		9E6EAC452B02719200A7A7BD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAC432B02719200A7A7BD /* README.md */; };
 		9E6EAC462B02719200A7A7BD /* 환경세팅.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAC442B02719200A7A7BD /* 환경세팅.txt */; };
+		9E6EAC482B02775A00A7A7BD /* EunsuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EAC472B02775A00A7A7BD /* EunsuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiwonView.swift; sourceTree = "<group>"; };
 		9E6EAC432B02719200A7A7BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9E6EAC442B02719200A7A7BD /* 환경세팅.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "환경세팅.txt"; path = "../환경세팅.txt"; sourceTree = "<group>"; };
+		9E6EAC472B02775A00A7A7BD /* EunsuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EunsuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				0EC7900D2AFFE2CA00B1F687 /* API_PracticeApp.swift */,
 				0EC7900F2AFFE2CA00B1F687 /* ContentView.swift */,
+				9E6EAC472B02775A00A7A7BD /* EunsuView.swift */,
 				0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */,
 				0EC790112AFFE2CB00B1F687 /* Assets.xcassets */,
 				0EC790132AFFE2CB00B1F687 /* Preview Content */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EC7901E2AFFEA7E00B1F687 /* JiwonView.swift in Sources */,
+				9E6EAC482B02775A00A7A7BD /* EunsuView.swift in Sources */,
 				0EC790102AFFE2CA00B1F687 /* ContentView.swift in Sources */,
 				0EC7900E2AFFE2CA00B1F687 /* API_PracticeApp.swift in Sources */,
 			);

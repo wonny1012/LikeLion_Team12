@@ -33,8 +33,8 @@ struct ContentView: View {
                         .NavigationlabelModifier()
                 })
                 
-                NavigationLink(destination: JiwonView(), label: {
-                    Text("정은수님View")
+                NavigationLink(destination: EunsuView(), label: {
+                    Text("EunsuView")
                         .NavigationlabelModifier()
                 })
               
