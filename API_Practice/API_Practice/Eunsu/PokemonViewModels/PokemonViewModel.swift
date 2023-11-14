@@ -25,4 +25,31 @@ final class ViewModel: ObservableObject {
         self.pokemonList = pokemonManager.getPokemon()
 //        print(self.pokemonList)
     }
+    
+    func getPokemonIndex(pokemon: Pokemon) -> Int {
+        if let index = self.pokemonList.firstIndex(of: pokemon) {
+            return index + 1
+        }
+        return 0 // if found nothing
+    }
+    
+    func getDetails(pokemon: Pokemon) {
+        let id = getPokemonIndex(pokemon: pokemon)
+        
+        self.pokemonDetails = DetailPokemon(id: 0, height: 0, weight: 0) //placeholder
+        
+        pokemonManager.getDetailedPokemon(id: id) { data in
+            DispatchQueue.main.async {
+                self.pokemonDetails = data
+            }
+        }
+    }
+    
+    /// adjust heigt and weight to meter and kilogram
+    func formatHW(value: Int) -> String {
+        let dValue = Double(value)
+        let strig = String(format: "%.2f", dValue / 10)
+        
+        return strig
+    }
 }
