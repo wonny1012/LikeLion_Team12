@@ -25,7 +25,7 @@ struct EunsuView: View {
                     }
                 }
                 .animation(.easeIn(duration: 0.3), value: pokemonVM.filteredPokemon.count) //value의 값이 바뀌면 aninmation이 작동한다.
-                .navigationTitle("PokemonUI")
+                .navigationTitle("Pokemons")
                 .navigationBarTitleDisplayMode(.inline)
             }
             .searchable(text: $pokemonVM.searchText)
