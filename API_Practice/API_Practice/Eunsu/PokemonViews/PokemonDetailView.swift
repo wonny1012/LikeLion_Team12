@@ -28,5 +28,5 @@ struct PokemonDetailView: View {
 }
 
 #Preview {
-    PokemonDetailView(pokemon: Pokemon.samplePokemon).environmentObject(ViewModel())
+    PokemonDetailView(pokemon: Pokemon.samplePokemon).environmentObject(PokemonViewModel())
 }
