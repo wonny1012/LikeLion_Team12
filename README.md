@@ -1,6 +1,27 @@
 # LikeLion_Team12
 Practice how to use API
 
+# Instruction
+**권운기**
+- 간단한 설명
+- API Source: [이름](api링크)
+
+**권지원**
+- 간단한 설명
+- API Source: [이름](api링크)
+
+**김현진**
+- 간단한 설명
+- API Source: [이름](api링크)
+
+**양주원**
+- 간단한 설명
+- API Source: [이름](api링크)
+
+**정은수**
+- 간단한 설명
+- API Source: [pokemon](https://pokeapi.co/)
+
 # App
 <!-- 이미지 가로 사이즈 210 -->
 |이름|뷰1|뷰2|GIF|
@@ -24,7 +45,7 @@ Practice how to use API
 **양주원**
 - [ ]
 
-**정은수**:
+**정은수**
 - [ ] 더 다양한 API Detail Data를 받아와서 DetailView에 보여주기
 - [ ] 포켓몬 이름을 한글로 보여주기
 
