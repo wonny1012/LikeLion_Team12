@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E043F202B04F72A005E0BB5 /* JiwonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E043F1F2B04F72A005E0BB5 /* JiwonView.swift */; };
 		0EC7900E2AFFE2CA00B1F687 /* API_PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7900D2AFFE2CA00B1F687 /* API_PracticeApp.swift */; };
 		0EC790102AFFE2CA00B1F687 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7900F2AFFE2CA00B1F687 /* ContentView.swift */; };
 		0EC790122AFFE2CB00B1F687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC790112AFFE2CB00B1F687 /* Assets.xcassets */; };
 		0EC790152AFFE2CB00B1F687 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC790142AFFE2CB00B1F687 /* Preview Assets.xcassets */; };
-		0EC7901E2AFFEA7E00B1F687 /* JiwonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */; };
+		0EC791602B047AF600B1F687 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7915F2B047AF600B1F687 /* DataModel.swift */; };
 		9E46B2F62B03661900DD2BFD /* pokemon.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E46B2F52B03661900DD2BFD /* pokemon.json */; };
 		9E46B2F92B03692A00DD2BFD /* PokemonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E46B2F82B03692A00DD2BFD /* PokemonHelpers.swift */; };
 		9E46B2FD2B036AD300DD2BFD /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E46B2FC2B036AD300DD2BFD /* PokemonModel.swift */; };
@@ -25,12 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E043F1F2B04F72A005E0BB5 /* JiwonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiwonView.swift; sourceTree = "<group>"; };
 		0EC7900A2AFFE2CA00B1F687 /* API_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = API_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC7900D2AFFE2CA00B1F687 /* API_PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_PracticeApp.swift; sourceTree = "<group>"; };
 		0EC7900F2AFFE2CA00B1F687 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0EC790112AFFE2CB00B1F687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EC790142AFFE2CB00B1F687 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiwonView.swift; sourceTree = "<group>"; };
+		0EC7915F2B047AF600B1F687 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		9E46B2F52B03661900DD2BFD /* pokemon.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pokemon.json; sourceTree = "<group>"; };
 		9E46B2F82B03692A00DD2BFD /* PokemonHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonHelpers.swift; sourceTree = "<group>"; };
 		9E46B2FC2B036AD300DD2BFD /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				9E6EAC432B02719200A7A7BD /* README.md */,
 				0EC7900C2AFFE2CA00B1F687 /* API_Practice */,
 				0EC7900B2AFFE2CA00B1F687 /* Products */,
+				0EC7912C2B03C94E00B1F687 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,7 +80,7 @@
 			children = (
 				0EC7900D2AFFE2CA00B1F687 /* API_PracticeApp.swift */,
 				0EC7900F2AFFE2CA00B1F687 /* ContentView.swift */,
-				0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */,
+				0EC791132B03B52800B1F687 /* JiwonAPI */,
 				9E46B2FA2B036AAA00DD2BFD /* Eunsu */,
 				0EC790112AFFE2CB00B1F687 /* Assets.xcassets */,
 				0EC790132AFFE2CB00B1F687 /* Preview Content */,
@@ -91,6 +94,22 @@
 				0EC790142AFFE2CB00B1F687 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0EC791132B03B52800B1F687 /* JiwonAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0E043F1F2B04F72A005E0BB5 /* JiwonView.swift */,
+				0EC7915F2B047AF600B1F687 /* DataModel.swift */,
+			);
+			path = JiwonAPI;
+			sourceTree = "<group>";
+		};
+		0EC7912C2B03C94E00B1F687 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9E46B2F42B0365F100DD2BFD /* EunsuData */ = {
@@ -172,6 +191,8 @@
 			dependencies = (
 			);
 			name = API_Practice;
+			packageProductDependencies = (
+			);
 			productName = API_Practice;
 			productReference = 0EC7900A2AFFE2CA00B1F687 /* API_Practice.app */;
 			productType = "com.apple.product-type.application";
@@ -200,6 +221,9 @@
 				Base,
 			);
 			mainGroup = 0EC790012AFFE2CA00B1F687;
+			packageReferences = (
+				0EC791212B03C1E900B1F687 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 0EC7900B2AFFE2CA00B1F687 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -230,7 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E46B3002B03791600DD2BFD /* PokemonViewModel.swift in Sources */,
-				0EC7901E2AFFEA7E00B1F687 /* JiwonView.swift in Sources */,
+				0EC791602B047AF600B1F687 /* DataModel.swift in Sources */,
 				9E46B3062B03838700DD2BFD /* PokemonDetailView.swift in Sources */,
 				9E46B2FD2B036AD300DD2BFD /* PokemonModel.swift in Sources */,
 				9E46B3032B0379F400DD2BFD /* PokemonManager.swift in Sources */,
@@ -239,6 +263,7 @@
 				9E46B2F92B03692A00DD2BFD /* PokemonHelpers.swift in Sources */,
 				9E46B3082B0386CB00DD2BFD /* PokemonView.swift in Sources */,
 				0EC7900E2AFFE2CA00B1F687 /* API_PracticeApp.swift in Sources */,
+				0E043F202B04F72A005E0BB5 /* JiwonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +469,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0EC791212B03C1E900B1F687 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 0EC790022AFFE2CA00B1F687 /* Project object */;
 }
