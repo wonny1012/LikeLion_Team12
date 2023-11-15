@@ -25,7 +25,7 @@ struct DetailPokemon: Codable {
     let id: Int
     let height: Int
     let weight: Int
-//    let species: String
+    let species: String
 }
 
 struct Species: Codable, Identifiable, Equatable {
@@ -36,16 +36,7 @@ struct Species: Codable, Identifiable, Equatable {
     static var sampleSpecies = Species(name: "Pokémon Flamm", url: "https://pokeapi.co/api/v2/pokemon-species/5/")
 }
 
-struct Generas: Codable {
-    let genera: [Genera]
-}
-
 struct Genera: Codable {
     let genus: String
-    let language: Language
+    let language: String
 }
-
-struct Language: Codable {
-    let name: String
-}
-
