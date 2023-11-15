@@ -15,10 +15,8 @@ struct JiwonView: View {
         NavigationView {
             List(songs, id: \.id) { song in
                 HStack {
-                    //수정할 예정
-//질문 예정  Image("https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/63/4a/b8/634ab8d4-abbd-d00a-8913-3048bc89cb4d/075679749123_01.jpg/60x60bb.jpg")
-                    Image(systemName: "airplane")
-                        .frame(width: 100, height: 100)
+                    AsyncImage(url: URL(string: song.artworkUrl))
+                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
                     VStack(alignment: .leading) {
                         Text(song.trackName)
                         Text(song.artistName)
