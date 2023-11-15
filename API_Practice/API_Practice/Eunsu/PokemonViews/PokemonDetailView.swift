@@ -20,11 +20,12 @@ struct PokemonDetailView: View {
                 Text("**ID**: \(pokemonVM.pokemonDetails?.id ?? 0)")
                 Text("**Weight**: \(pokemonVM.formatHW(value: pokemonVM.pokemonDetails?.weight ?? 0)) kg")
                 Text("**Height**: \(pokemonVM.formatHW(value: pokemonVM.pokemonDetails?.height ?? 0)) m")
-                Text("**Species**: \(pokemonVM.genra?.genus ?? "Test")")
+                Text("**Species**: \(pokemonVM.genras?.genera[0].genus ?? "Test")")
             }
         }
         .onAppear {
             pokemonVM.getDetails(pokemon: pokemon)
+            pokemonVM.getGenra(pokemon: pokemon)
         }
     }
 }
