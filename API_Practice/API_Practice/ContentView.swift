@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var pokemonVM = PokemonViewModel()
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 30) {
@@ -33,14 +35,15 @@ struct ContentView: View {
                         .NavigationlabelModifier()
                 })
                 
-                NavigationLink(destination: JiwonView(), label: {
-                    Text("정은수님View")
+                NavigationLink(destination: EunsuView(), label: {
+                    Text("EunsuView")
                         .NavigationlabelModifier()
                 })
               
                 Spacer()
             }
         }
+        .environmentObject(pokemonVM)
     }
 }
 
