@@ -58,7 +58,7 @@ final class PokemonViewModel: ObservableObject {
             }
         }
     }
-
+  
     func getSpecies(pokemon: Pokemon) -> String {
         let id = getPokemonIndex(pokemon: pokemon)
 //        let name = pokemon.name

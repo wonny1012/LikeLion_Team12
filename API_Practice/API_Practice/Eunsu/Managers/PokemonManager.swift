@@ -36,14 +36,4 @@ class PokemonManager {
             print(error)
         }
     }
-    
-    func getPokemonSpecies(id: Int, _ completion: @escaping(Genera) -> ()) {
-        Bundle.main.fetchData(url: "pokeapi.co/api/v2/pokemon-species/\(id)/",
-                              model: Genera.self) { data in
-            completion(data)
-            print(data)
-        } failure: { error in
-            print(error)
-        }
-    }
 }

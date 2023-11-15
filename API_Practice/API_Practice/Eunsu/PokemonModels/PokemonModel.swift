@@ -25,7 +25,7 @@ struct DetailPokemon: Codable {
     let id: Int
     let height: Int
     let weight: Int
-//    let species: String
+    let species: String
 }
 
 struct Species: Codable, Identifiable, Equatable {
@@ -48,4 +48,3 @@ struct Genera: Codable {
 struct Language: Codable {
     let name: String
 }
-
