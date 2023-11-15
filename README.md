@@ -1,4 +1,32 @@
 # LikeLion_Team12
+Practice how to use API
+
+# App
+<!-- 이미지 가로 사이즈 210 -->
+|이름|뷰1|뷰2|GIF|
+|:-:|:-:|:-:|:-:|
+|권운기||||
+|권지원||||
+|김현진||||
+|양주원||||
+|정은수|<img width="210" alt="포켓몬 리스트" src="https://github.com/wonny1012/LikeLion_Team12/assets/106911494/64493ada-52c9-41c0-913c-ac41b08e5b4a">|<img width="210" alt="디테일 뷰" src="https://github.com/wonny1012/LikeLion_Team12/assets/106911494/022291b2-3a55-4207-bad9-248b786a8fee">|<img width="210"  alt="검색 작동" src="https://github.com/wonny1012/LikeLion_Team12/assets/106911494/cf8e0a99-8d8c-4e36-a2b3-3512157e3f9f">|
+
+## to be developed..
+**권운기**
+- [ ]
+
+**권지원**
+- [ ]
+
+**김현진**
+- [ ]
+
+**양주원**
+- [ ]
+
+**정은수**:
+- [ ] 더 다양한 API Detail Data를 받아와서 DetailView에 보여주기
+- [ ] 포켓몬 이름을 한글로 보여주기
 
 ## Commit Convention
 |Gitmoji|Tag|Detail|
