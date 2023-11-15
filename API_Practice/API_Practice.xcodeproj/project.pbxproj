@@ -12,6 +12,7 @@
 		0EC790122AFFE2CB00B1F687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC790112AFFE2CB00B1F687 /* Assets.xcassets */; };
 		0EC790152AFFE2CB00B1F687 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC790142AFFE2CB00B1F687 /* Preview Assets.xcassets */; };
 		0EC7901E2AFFEA7E00B1F687 /* JiwonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */; };
+		0EC791602B047AF600B1F687 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7915F2B047AF600B1F687 /* DataModel.swift */; };
 		9E6EAC452B02719200A7A7BD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAC432B02719200A7A7BD /* README.md */; };
 		9E6EAC462B02719200A7A7BD /* 환경세팅.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAC442B02719200A7A7BD /* 환경세팅.txt */; };
 /* End PBXBuildFile section */
@@ -23,6 +24,7 @@
 		0EC790112AFFE2CB00B1F687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EC790142AFFE2CB00B1F687 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiwonView.swift; sourceTree = "<group>"; };
+		0EC7915F2B047AF600B1F687 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		9E6EAC432B02719200A7A7BD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		9E6EAC442B02719200A7A7BD /* 환경세팅.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "환경세팅.txt"; path = "../환경세팅.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,6 +47,7 @@
 				9E6EAC432B02719200A7A7BD /* README.md */,
 				0EC7900C2AFFE2CA00B1F687 /* API_Practice */,
 				0EC7900B2AFFE2CA00B1F687 /* Products */,
+				0EC7912C2B03C94E00B1F687 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,7 +64,7 @@
 			children = (
 				0EC7900D2AFFE2CA00B1F687 /* API_PracticeApp.swift */,
 				0EC7900F2AFFE2CA00B1F687 /* ContentView.swift */,
-				0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */,
+				0EC791132B03B52800B1F687 /* JiwonAPI */,
 				0EC790112AFFE2CB00B1F687 /* Assets.xcassets */,
 				0EC790132AFFE2CB00B1F687 /* Preview Content */,
 			);
@@ -74,6 +77,22 @@
 				0EC790142AFFE2CB00B1F687 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0EC791132B03B52800B1F687 /* JiwonAPI */ = {
+			isa = PBXGroup;
+			children = (
+				0EC7901D2AFFEA7E00B1F687 /* JiwonView.swift */,
+				0EC7915F2B047AF600B1F687 /* DataModel.swift */,
+			);
+			path = JiwonAPI;
+			sourceTree = "<group>";
+		};
+		0EC7912C2B03C94E00B1F687 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +111,8 @@
 			dependencies = (
 			);
 			name = API_Practice;
+			packageProductDependencies = (
+			);
 			productName = API_Practice;
 			productReference = 0EC7900A2AFFE2CA00B1F687 /* API_Practice.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 0EC790012AFFE2CA00B1F687;
+			packageReferences = (
+				0EC791212B03C1E900B1F687 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 0EC7900B2AFFE2CA00B1F687 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EC7901E2AFFEA7E00B1F687 /* JiwonView.swift in Sources */,
+				0EC791602B047AF600B1F687 /* DataModel.swift in Sources */,
 				0EC790102AFFE2CA00B1F687 /* ContentView.swift in Sources */,
 				0EC7900E2AFFE2CA00B1F687 /* API_PracticeApp.swift in Sources */,
 			);
@@ -356,6 +381,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0EC791212B03C1E900B1F687 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 0EC790022AFFE2CA00B1F687 /* Project object */;
 }
