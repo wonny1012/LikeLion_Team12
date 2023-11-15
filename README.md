@@ -53,7 +53,9 @@ Practice how to use API
 |Gitmoji|Tag|Detail|
 |:-:|:-|:-|
 |✨|Feat:|새로운 기능을 추가|
+|🐛|Bug:|버그 report(발견)|
 |🐞|Fix:|버그를 수정|
+|🛠️|Resolves:|이슈 또는 버그 수정 완료|
 |♻️|Refactor:|Production 코드 리펙토링|
 |🎨|Design:|UI Design 변경|
 |📝|Docs:|documetation을 변경|
