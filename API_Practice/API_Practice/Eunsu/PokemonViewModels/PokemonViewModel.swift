@@ -14,7 +14,7 @@ final class PokemonViewModel: ObservableObject {
     @Published var pokemonList = [Pokemon]()
     @Published var pokemonDetails: DetailPokemon?
     @Published var species: Species?
-    @Published var genra: Genera?
+    @Published var genras: Generas?
     @Published var searchText = ""
     
     var filteredPokemon: [Pokemon] {
@@ -47,20 +47,32 @@ final class PokemonViewModel: ObservableObject {
         }
     }
     
+    func getGenra(pokemon: Pokemon) {
+        let id = getPokemonIndex(pokemon: pokemon)
+        
+        self.genras = Generas(genera: [Genera(genus: "Seed Pokémon?", language: Language(name: "en"))])
+        
+        pokemonManager.getPokemonSpecies(id: id) { data in
+            DispatchQueue.main.async {
+                self.genras = data
+            }
+        }
+    }
+
     func getSpecies(pokemon: Pokemon) -> String {
         let id = getPokemonIndex(pokemon: pokemon)
 //        let name = pokemon.name
         self.species = Species.sampleSpecies
-        self.genra = Genera(genus: "Seed Pokémon?", language: "en")
+        self.genras = Generas(genera: [Genera(genus: "Seed Pokémon?", language: Language(name: "en"))])
         
         pokemonManager.getPokemonSpecies(id: id) { data in
             DispatchQueue.main.async {
-                self.genra = data
+                self.genras = data
             }
         }
         
-        if let species = genra?.genus {
-            return species
+        if let species = genras?.genera {
+            return species[0].genus
         }
         
         return "No Species"
