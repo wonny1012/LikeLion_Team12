@@ -36,7 +36,16 @@ struct Species: Codable, Identifiable, Equatable {
     static var sampleSpecies = Species(name: "Pokémon Flamm", url: "https://pokeapi.co/api/v2/pokemon-species/5/")
 }
 
+struct Generas: Codable {
+    let genera: [Genera]
+}
+
 struct Genera: Codable {
     let genus: String
-    let language: String
+    let language: Language
 }
+
+struct Language: Codable {
+    let name: String
+}
+
