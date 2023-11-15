@@ -25,6 +25,7 @@ struct PokemonDetailView: View {
         }
         .onAppear {
             pokemonVM.getDetails(pokemon: pokemon)
+            pokemonVM.getGenra(pokemon: pokemon)
         }
     }
 }

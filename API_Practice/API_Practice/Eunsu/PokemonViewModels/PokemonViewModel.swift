@@ -38,7 +38,7 @@ final class PokemonViewModel: ObservableObject {
     func getDetails(pokemon: Pokemon) {
         let id = getPokemonIndex(pokemon: pokemon)
         
-        self.pokemonDetails = DetailPokemon(id: 9, height: 8, weight: 7, species: getSpecies(pokemon: pokemon)) //placeholder
+        self.pokemonDetails = DetailPokemon(id: 9, height: 8, weight: 7) //placeholder
         
         pokemonManager.getDetailedPokemon(id: id) { data in
             DispatchQueue.main.async {
@@ -46,6 +46,19 @@ final class PokemonViewModel: ObservableObject {
             }
         }
     }
+    
+    func getGenra(pokemon: Pokemon) {
+        let id = getPokemonIndex(pokemon: pokemon)
+        
+        self.genras = Generas(genera: [Genera(genus: "Seed Pokémon?", language: Language(name: "en"))])
+        
+        pokemonManager.getPokemonSpecies(id: id) { data in
+            DispatchQueue.main.async {
+                self.genras = data
+            }
+        }
+    }
+
     
     func getSpecies(pokemon: Pokemon) -> String {
         let id = getPokemonIndex(pokemon: pokemon)
