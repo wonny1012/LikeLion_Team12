@@ -9,7 +9,7 @@ import Foundation
 
 struct PokemonPage: Codable {
     let count: Int
-    let next: String
+//    let next: String
     let results: [Pokemon]
 }
 
@@ -25,4 +25,18 @@ struct DetailPokemon: Codable {
     let id: Int
     let height: Int
     let weight: Int
+    let species: String
+}
+
+struct Species: Codable, Identifiable, Equatable {
+    let id = UUID()
+    let name: String
+    let url: String
+    
+    static var sampleSpecies = Species(name: "Pokémon Flamm", url: "https://pokeapi.co/api/v2/pokemon-species/5/")
+}
+
+struct Genera: Codable {
+    let genus: String
+    let language: String
 }

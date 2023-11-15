@@ -19,7 +19,7 @@ struct EunsuView: View {
             ScrollView {
                 LazyVGrid(columns: adaptveColumns, spacing: 10) {
                     ForEach(pokemonVM.filteredPokemon) { pokemon in
-                        NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
+                        NavigationLink(destination: PokemonDetailView(pokemon: pokemon, species: Species.sampleSpecies)) {
                             PokemonView(pokemon: pokemon)
                         }
                     }
