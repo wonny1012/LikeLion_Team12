@@ -31,7 +31,7 @@ class PokemonManager {
         Bundle.main.fetchData(url: "https://pokeapi.co/api/v2/pokemon-species/\(id)/",
                               model: Generas.self) { data in
             completion(data)
-            print(data)
+            print("\(#function): \(data.genera)")
         } failure: { error in
             print(error)
         }
