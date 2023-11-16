@@ -56,7 +56,6 @@ struct NFTGridView: View {
                         .padding()
                     }
                 } else if state.error != nil {
-                    
                 } else {
                     ProgressView()
                         .frame(width: 150, height: 150)
@@ -71,14 +70,13 @@ struct NFTGridView: View {
                     .foregroundStyle(.white)
                     .shadow(radius: 3, x: 0, y: 0)
             )
-            
         }
     }
 }
+
 struct HeartButton: View {
     @State var isLiked = false
     @State var scale: CGFloat = 1
-    
     var body: some View {
         Image(systemName: isLiked ? "heart.fill" : "heart")
             .font(.body)
@@ -112,9 +110,7 @@ extension HyunjinView {
             .padding(.horizontal)
         }
     }
-    
 }
-
 // MARK: - Functions
 
 extension HyunjinView {
