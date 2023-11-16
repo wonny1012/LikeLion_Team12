@@ -23,6 +23,10 @@
 		9E6EAC452B02719200A7A7BD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAC432B02719200A7A7BD /* README.md */; };
 		9E6EAC462B02719200A7A7BD /* 환경세팅.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAC442B02719200A7A7BD /* 환경세팅.txt */; };
 		9E6EAC482B02775A00A7A7BD /* EunsuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EAC472B02775A00A7A7BD /* EunsuView.swift */; };
+		CEACF0752B05DD26001A0FA7 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = CEACF0742B05DD26001A0FA7 /* Nuke */; };
+		CEACF0772B05DD26001A0FA7 /* NukeExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = CEACF0762B05DD26001A0FA7 /* NukeExtensions */; };
+		CEACF0792B05DD26001A0FA7 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = CEACF0782B05DD26001A0FA7 /* NukeUI */; };
+		CEACF07B2B05DD26001A0FA7 /* NukeVideo in Frameworks */ = {isa = PBXBuildFile; productRef = CEACF07A2B05DD26001A0FA7 /* NukeVideo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEACF0792B05DD26001A0FA7 /* NukeUI in Frameworks */,
+				CEACF0752B05DD26001A0FA7 /* Nuke in Frameworks */,
+				CEACF0772B05DD26001A0FA7 /* NukeExtensions in Frameworks */,
+				CEACF07B2B05DD26001A0FA7 /* NukeVideo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +88,7 @@
 			children = (
 				0EC7900D2AFFE2CA00B1F687 /* API_PracticeApp.swift */,
 				0EC7900F2AFFE2CA00B1F687 /* ContentView.swift */,
+				CEACF0722B05DCE6001A0FA7 /* Hyunjin */,
 				0EC791132B03B52800B1F687 /* JiwonAPI */,
 				9E46B2FA2B036AAA00DD2BFD /* Eunsu */,
 				0EC790112AFFE2CB00B1F687 /* Assets.xcassets */,
@@ -175,6 +184,13 @@
 			path = PokemonViews;
 			sourceTree = "<group>";
 		};
+		CEACF0722B05DCE6001A0FA7 /* Hyunjin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Hyunjin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,6 +208,10 @@
 			);
 			name = API_Practice;
 			packageProductDependencies = (
+				CEACF0742B05DD26001A0FA7 /* Nuke */,
+				CEACF0762B05DD26001A0FA7 /* NukeExtensions */,
+				CEACF0782B05DD26001A0FA7 /* NukeUI */,
+				CEACF07A2B05DD26001A0FA7 /* NukeVideo */,
 			);
 			productName = API_Practice;
 			productReference = 0EC7900A2AFFE2CA00B1F687 /* API_Practice.app */;
@@ -223,6 +243,7 @@
 			mainGroup = 0EC790012AFFE2CA00B1F687;
 			packageReferences = (
 				0EC791212B03C1E900B1F687 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CEACF0732B05DD26001A0FA7 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 0EC7900B2AFFE2CA00B1F687 /* Products */;
 			projectDirPath = "";
@@ -479,7 +500,38 @@
 				minimumVersion = 10.18.0;
 			};
 		};
+		CEACF0732B05DD26001A0FA7 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEACF0742B05DD26001A0FA7 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEACF0732B05DD26001A0FA7 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		CEACF0762B05DD26001A0FA7 /* NukeExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEACF0732B05DD26001A0FA7 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeExtensions;
+		};
+		CEACF0782B05DD26001A0FA7 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEACF0732B05DD26001A0FA7 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+		CEACF07A2B05DD26001A0FA7 /* NukeVideo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEACF0732B05DD26001A0FA7 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeVideo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0EC790022AFFE2CA00B1F687 /* Project object */;
 }
