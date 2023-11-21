@@ -16,32 +16,34 @@ struct Comment: Codable, Identifiable {
 }
 
 struct UnkiView: View {
-@State private var comments: [Comment] = []
-    
+    @State private var comments: [Comment] = []
+
     var body: some View {
         NavigationView {
             List(comments) { comment in
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("이름: \(comment.name)")
-                        .font(.headline)
-                    Text("이메일: \(comment.email)")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                    Text("내용: \(comment.body)")
-                        .font(.body)
-                        .foregroundColor(.black)
+                NavigationLink(destination: CommentDetail(comment: comment)) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("이름: \(comment.name)")
+                            .font(.headline)
+                        Text("이메일: \(comment.email)")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                        Text("내용: \(comment.body)")
+                            .font(.body)
+                            .foregroundColor(.black)
+                    }
                 }
             }
             .onAppear(perform: loadData)
             .navigationBarTitle("댓글 목록")
         }
     }
-    
+
     func loadData() {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/comments") else {
             return
         }
-        
+
         URLSession.shared.dataTask(with: url) { data, _, error in
             if let data = data {
                 do {
@@ -57,6 +59,24 @@ struct UnkiView: View {
     }
 }
 
+struct CommentDetail: View {
+    var comment: Comment
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("이름: \(comment.name)")
+                .font(.headline)
+            Text("이메일: \(comment.email)")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+            Text("내용: \(comment.body)")
+                .font(.body)
+                .foregroundColor(.black)
+        }
+        .padding()
+        .navigationBarTitle("댓글 상세 정보")
+    }
+}
 #Preview {
     UnkiView()
 }
