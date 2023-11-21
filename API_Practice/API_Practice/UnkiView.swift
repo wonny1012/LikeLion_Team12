@@ -63,17 +63,21 @@ struct CommentDetail: View {
     var comment: Comment
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading) {
             Text("이름: \(comment.name)")
                 .font(.headline)
+                .padding(1)
             Text("이메일: \(comment.email)")
                 .font(.subheadline)
                 .foregroundColor(.gray)
+                .padding(1)
             Text("내용: \(comment.body)")
                 .font(.body)
                 .foregroundColor(.black)
+                .padding(1)
+            Spacer()
         }
-        .padding()
+        .padding(1)
         .navigationBarTitle("댓글 상세 정보")
     }
 }
