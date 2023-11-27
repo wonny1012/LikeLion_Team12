@@ -15,7 +15,7 @@ struct ContentView: View {
             VStack(spacing: 30) {
                 Spacer()
                 //각자의 뷰를 넣어주세요!
-                NavigationLink(destination: JiwonView(), label: {
+                NavigationLink(destination: UnkiView(), label: {
                     Text("권운기님View")
                         .NavigationlabelModifier()
                 })
