@@ -13,6 +13,8 @@ final class PokemonViewModel: ObservableObject {
     
     @Published var pokemonList = [Pokemon]()
     @Published var pokemonDetails: DetailPokemon?
+    @Published var species: Species?
+    @Published var genras: Generas?
     @Published var searchText = ""
     
     var filteredPokemon: [Pokemon] {
@@ -36,13 +38,44 @@ final class PokemonViewModel: ObservableObject {
     func getDetails(pokemon: Pokemon) {
         let id = getPokemonIndex(pokemon: pokemon)
         
-        self.pokemonDetails = DetailPokemon(id: 9, height: 8, weight: 7) //placeholder
+        self.pokemonDetails = DetailPokemon(id: 9, height: 8, weight: 7, species: getSpecies(pokemon: pokemon)) //placeholder
         
         pokemonManager.getDetailedPokemon(id: id) { data in
             DispatchQueue.main.async {
                 self.pokemonDetails = data
             }
         }
+    }
+    
+    func getGenra(pokemon: Pokemon) {
+        let id = getPokemonIndex(pokemon: pokemon)
+        
+        self.genras = Generas(genera: [Genera(genus: "Seed Pokémon?", language: Language(name: "en"))])
+        
+        pokemonManager.getPokemonSpecies(id: id) { data in
+            DispatchQueue.main.async {
+                self.genras = data
+            }
+        }
+    }
+  
+    func getSpecies(pokemon: Pokemon) -> String {
+        let id = getPokemonIndex(pokemon: pokemon)
+//        let name = pokemon.name
+        self.species = Species.sampleSpecies
+        self.genras = Generas(genera: [Genera(genus: "Seed Pokémon?", language: Language(name: "en"))])
+        
+        pokemonManager.getPokemonSpecies(id: id) { data in
+            DispatchQueue.main.async {
+                self.genras = data
+            }
+        }
+        
+        if let species = genras?.genera {
+            return species[0].genus
+        }
+        
+        return "No Species"
     }
     
     /// adjust heigt and weight to meter and kilogram
