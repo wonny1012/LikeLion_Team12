@@ -55,9 +55,19 @@ struct UnkiDetailView: View { // 디테일 뷰
     var DailyBoxOfficeLists: DailyBoxOfficeList
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("\(DailyBoxOfficeLists.rank). \(DailyBoxOfficeLists.movieNm)")
+                .font(.title)
+                .bold()
+            Text("개봉일자: \(DailyBoxOfficeLists.openDt)")
+                .font(.title2)
+            Text("오늘 관객수: \(DailyBoxOfficeLists.audiCnt)명")
+                .font(.title2)
+            Text("누적 관객수: \(DailyBoxOfficeLists.audiAcc)명")
+                .font(.title2)
+            Spacer()
         }
+        .padding()
     }
 }
 
