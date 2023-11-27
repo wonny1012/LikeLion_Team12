@@ -13,8 +13,10 @@ struct UnkiView: View {
     var body: some View {
         NavigationView {
             List(DailyBoxOfficeLists, id: \.rank) { movies in
-                VStack {
-                    Text("\(movies.rank). \(movies.movieNm)")
+                NavigationLink(destination: UnkiDetailView(DailyBoxOfficeLists: movies)) {
+                    VStack {
+                        Text("\(movies.rank). \(movies.movieNm)")
+                    }
                 }
             }
             .onAppear(perform: loadData)
@@ -40,6 +42,16 @@ struct UnkiView: View {
                 }
             }
         }.resume()
+    }
+}
+
+struct UnkiDetailView: View {
+    var DailyBoxOfficeLists: DailyBoxOfficeList
+    
+    var body: some View {
+        VStack {
+            Text("\(DailyBoxOfficeLists.rank). \(DailyBoxOfficeLists.movieNm)")
+        }
     }
 }
 
