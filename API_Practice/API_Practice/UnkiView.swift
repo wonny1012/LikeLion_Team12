@@ -9,8 +9,14 @@ import SwiftUI
 
 struct UnkiView: View {
     @State private var DailyBoxOfficeLists: [DailyBoxOfficeList] = []
+    @State public var now = Date()
     
     var body: some View {
+        DatePicker(
+                "",
+                selection: $now,
+                displayedComponents: [.date]
+            )
         NavigationView {
             List(DailyBoxOfficeLists, id: \.rank) { movies in
                 NavigationLink(destination: UnkiDetailView(DailyBoxOfficeLists: movies)) {
@@ -20,7 +26,7 @@ struct UnkiView: View {
                 }
             }
             .onAppear(perform: loadData)
-            .navigationTitle("오늘의 영화 순위")
+            .navigationTitle("\("MM월dd일".stringFromDate(now: now)) 영화 순위")
         }
     }
     
@@ -45,13 +51,22 @@ struct UnkiView: View {
     }
 }
 
-struct UnkiDetailView: View {
+struct UnkiDetailView: View { // 디테일 뷰
     var DailyBoxOfficeLists: DailyBoxOfficeList
     
     var body: some View {
         VStack {
             Text("\(DailyBoxOfficeLists.rank). \(DailyBoxOfficeLists.movieNm)")
         }
+    }
+}
+
+extension String { // 날짜 포멧 변경
+    func stringFromDate(now: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = self
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        return dateFormatter.string(from: now)
     }
 }
 
