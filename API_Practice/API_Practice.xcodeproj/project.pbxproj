@@ -24,6 +24,7 @@
 		9E6EAC462B02719200A7A7BD /* 환경세팅.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAC442B02719200A7A7BD /* 환경세팅.txt */; };
 		9E6EAC482B02775A00A7A7BD /* EunsuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6EAC472B02775A00A7A7BD /* EunsuView.swift */; };
 		E3722A6B2B0D58A40064EEF3 /* UnkiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3722A6A2B0D58A40064EEF3 /* UnkiView.swift */; };
+		E394C6C42B14E0CD0070FE7E /* MovieModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E394C6C32B14E0CD0070FE7E /* MovieModelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		9E6EAC442B02719200A7A7BD /* 환경세팅.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "환경세팅.txt"; path = "../환경세팅.txt"; sourceTree = "<group>"; };
 		9E6EAC472B02775A00A7A7BD /* EunsuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EunsuView.swift; sourceTree = "<group>"; };
 		E3722A6A2B0D58A40064EEF3 /* UnkiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UnkiView.swift; path = API_Practice/UnkiView.swift; sourceTree = SOURCE_ROOT; };
+		E394C6C32B14E0CD0070FE7E /* MovieModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				E3722A6A2B0D58A40064EEF3 /* UnkiView.swift */,
+				E394C6C32B14E0CD0070FE7E /* MovieModelView.swift */,
 			);
 			path = UnkiAPI;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				9E46B3002B03791600DD2BFD /* PokemonViewModel.swift in Sources */,
 				0EC791602B047AF600B1F687 /* DataModel.swift in Sources */,
+				E394C6C42B14E0CD0070FE7E /* MovieModelView.swift in Sources */,
 				9E46B3062B03838700DD2BFD /* PokemonDetailView.swift in Sources */,
 				E3722A6B2B0D58A40064EEF3 /* UnkiView.swift in Sources */,
 				9E46B2FD2B036AD300DD2BFD /* PokemonModel.swift in Sources */,
