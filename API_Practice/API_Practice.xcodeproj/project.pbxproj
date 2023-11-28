@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01FF907B2B11C2B70077BAF2 /* LokiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF907A2B11C2B70077BAF2 /* LokiView.swift */; };
+		01FF907D2B11C2FB0077BAF2 /* GitHubUsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FF907C2B11C2FB0077BAF2 /* GitHubUsersModel.swift */; };
 		0E043F202B04F72A005E0BB5 /* JiwonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E043F1F2B04F72A005E0BB5 /* JiwonView.swift */; };
 		0EC7900E2AFFE2CA00B1F687 /* API_PracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7900D2AFFE2CA00B1F687 /* API_PracticeApp.swift */; };
 		0EC790102AFFE2CA00B1F687 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7900F2AFFE2CA00B1F687 /* ContentView.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01FF907A2B11C2B70077BAF2 /* LokiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LokiView.swift; sourceTree = "<group>"; };
+		01FF907C2B11C2FB0077BAF2 /* GitHubUsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersModel.swift; sourceTree = "<group>"; };
 		0E043F1F2B04F72A005E0BB5 /* JiwonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiwonView.swift; sourceTree = "<group>"; };
 		0EC7900A2AFFE2CA00B1F687 /* API_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = API_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EC7900D2AFFE2CA00B1F687 /* API_PracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_PracticeApp.swift; sourceTree = "<group>"; };
@@ -68,6 +72,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01FF90792B11C2A40077BAF2 /* Loki */ = {
+			isa = PBXGroup;
+			children = (
+				01FF907A2B11C2B70077BAF2 /* LokiView.swift */,
+				01FF907C2B11C2FB0077BAF2 /* GitHubUsersModel.swift */,
+			);
+			path = Loki;
+			sourceTree = "<group>";
+		};
 		0EC790012AFFE2CA00B1F687 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +105,7 @@
 			children = (
 				0EC7900D2AFFE2CA00B1F687 /* API_PracticeApp.swift */,
 				0EC7900F2AFFE2CA00B1F687 /* ContentView.swift */,
+				01FF90792B11C2A40077BAF2 /* Loki */,
 				CEACF0722B05DCE6001A0FA7 /* Hyunjin */,
 				0EC791132B03B52800B1F687 /* JiwonAPI */,
 				9E46B2FA2B036AAA00DD2BFD /* Eunsu */,
@@ -285,12 +299,14 @@
 				CEACF07F2B05DD8E001A0FA7 /* NFTModels.swift in Sources */,
 				0EC791602B047AF600B1F687 /* DataModel.swift in Sources */,
 				9E46B3062B03838700DD2BFD /* PokemonDetailView.swift in Sources */,
+				01FF907B2B11C2B70077BAF2 /* LokiView.swift in Sources */,
 				9E46B2FD2B036AD300DD2BFD /* PokemonModel.swift in Sources */,
 				9E46B3032B0379F400DD2BFD /* PokemonManager.swift in Sources */,
 				9E6EAC482B02775A00A7A7BD /* EunsuView.swift in Sources */,
 				0EC790102AFFE2CA00B1F687 /* ContentView.swift in Sources */,
 				9E46B2F92B03692A00DD2BFD /* PokemonHelpers.swift in Sources */,
 				9E46B3082B0386CB00DD2BFD /* PokemonView.swift in Sources */,
+				01FF907D2B11C2FB0077BAF2 /* GitHubUsersModel.swift in Sources */,
 				0EC7900E2AFFE2CA00B1F687 /* API_PracticeApp.swift in Sources */,
 				0E043F202B04F72A005E0BB5 /* JiwonView.swift in Sources */,
 			);
