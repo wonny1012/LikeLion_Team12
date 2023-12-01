@@ -31,9 +31,35 @@ struct UnkiView: View {
                         Spacer()
                     }
                     .padding(15)
+                    Spacer()
                     Text("오늘의 데이터는 수집 중입니다.\n 날짜를 과거로 바꿔주세요.")
                         .font(.title2)
                         .bold()
+                    Spacer()
+                    Spacer()
+                }
+            } else if now > Date() {
+                VStack {
+                    DatePicker(
+                        "",
+                        selection: $now,
+                        displayedComponents: [.date]
+                    )
+                    .onChange(of: now) { // loadData로 now값 전달
+                        loadData()
+                    }
+                    HStack {
+                        Text("\("MM월dd일".stringFromDate(now: now)) 영화 순위")
+                            .font(.largeTitle)
+                            .bold()
+                        Spacer()
+                    }
+                    .padding(15)
+                    Spacer()
+                    Text("날짜가 미래로 되어있습니다.\n 날짜를 과거로 바꿔주세요.")
+                        .font(.title2)
+                        .bold()
+                    Spacer()
                     Spacer()
                 }
             } else {
