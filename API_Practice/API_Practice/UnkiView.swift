@@ -27,13 +27,19 @@ struct UnkiView: View {
                         selection: $now,
                         displayedComponents: [.date]
                 )
+                .onChange(of: now) { // loadData로 now값 전달
+                     loadData()
+                 }
             }
             .navigationTitle("\("MM월dd일".stringFromDate(now: now)) 영화 순위")
         }
     }
     
     func loadData() {
-        guard let url = URL(string: "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=20231126") else {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyyMMdd"
+        
+        guard let url = URL(string: "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=f5eef3421c602c6cb7ea224104795888&targetDt=\(formatter.string(from: now))") else {
             return
         }
         
