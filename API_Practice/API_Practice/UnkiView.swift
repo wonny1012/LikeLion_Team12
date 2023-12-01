@@ -12,11 +12,6 @@ struct UnkiView: View {
     @State public var now = Date()
     
     var body: some View {
-        DatePicker(
-                "",
-                selection: $now,
-                displayedComponents: [.date]
-            )
         NavigationView {
             List(DailyBoxOfficeLists, id: \.rank) { movies in
                 NavigationLink(destination: UnkiDetailView(DailyBoxOfficeLists: movies)) {
@@ -27,6 +22,13 @@ struct UnkiView: View {
             }
             .onAppear(perform: loadData)
             .navigationTitle("\("MM월dd일".stringFromDate(now: now)) 영화 순위")
+            .toolbar {
+                DatePicker(
+                        "",
+                        selection: $now,
+                        displayedComponents: [.date]
+                )
+            }
         }
     }
     
