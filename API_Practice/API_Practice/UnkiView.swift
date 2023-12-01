@@ -21,7 +21,6 @@ struct UnkiView: View {
                 }
             }
             .onAppear(perform: loadData)
-            .navigationTitle("\("MM월dd일".stringFromDate(now: now)) 영화 순위")
             .toolbar {
                 DatePicker(
                         "",
@@ -29,6 +28,7 @@ struct UnkiView: View {
                         displayedComponents: [.date]
                 )
             }
+            .navigationTitle("\("MM월dd일".stringFromDate(now: now)) 영화 순위")
         }
     }
     
@@ -57,20 +57,30 @@ struct UnkiDetailView: View { // 디테일 뷰
     var DailyBoxOfficeLists: DailyBoxOfficeList
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("\(DailyBoxOfficeLists.rank). \(DailyBoxOfficeLists.movieNm)")
-                .font(.title)
-                .bold()
-            Text("개봉일자: \(DailyBoxOfficeLists.openDt)")
-                .font(.title2)
-            Text("오늘 관객수: \(DailyBoxOfficeLists.audiCnt)명")
-                .font(.title2)
-            Text("누적 관객수: \(DailyBoxOfficeLists.audiAcc)명")
-                .font(.title2)
+        VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("\(DailyBoxOfficeLists.rank). \(DailyBoxOfficeLists.movieNm)")
+                        .font(.title)
+                        .bold()
+                    Text("개봉일자: \(DailyBoxOfficeLists.openDt)")
+                        .font(.title2)
+                    Text("오늘 관객수: \(DailyBoxOfficeLists.audiCnt)명")
+                        .font(.title2)
+                    Text("누적 관객수: \(DailyBoxOfficeLists.audiAcc)명")
+                        .font(.title2)
+                    
+                }
+                Spacer()
+            }
             Spacer()
+            .padding()
         }
         .padding()
+        .navigationTitle("영화 정보")
+        .navigationBarTitleDisplayMode(.inline)
     }
+        
 }
 
 extension String { // 날짜 포멧 변경
