@@ -65,8 +65,19 @@ struct UnkiView: View {
             } else {
                 List(DailyBoxOfficeLists, id: \.rank) { movies in
                     NavigationLink(destination: UnkiDetailView(DailyBoxOfficeLists: movies)) {
-                        VStack {
-                            Text("\(movies.rank). \(movies.movieNm)")
+                        HStack {
+                            Text("\(movies.rank).")
+                                .bold()
+                            if Int(movies.rankInten)! < 0 {
+                                Text("(\(movies.rankInten))")
+                                    .foregroundStyle(.red)
+                            } else if Int(movies.rankInten)! > 0 {
+                                Text("(+\(movies.rankInten))")
+                                    .foregroundStyle(.blue)
+                            } else {
+                                Text("(-)")
+                            }
+                            Text("\(movies.movieNm)")
                         }
                     }
                 }
