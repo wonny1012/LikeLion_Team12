@@ -78,6 +78,7 @@ struct UnkiView: View {
                                 Text("(-)")
                             }
                             Text("\(movies.movieNm)")
+                                .bold()
                         }
                     }
                 }
@@ -128,27 +129,29 @@ struct UnkiDetailView: View { // 디테일 뷰
     var DailyBoxOfficeLists: DailyBoxOfficeList
     
     var body: some View {
-        VStack {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("\(DailyBoxOfficeLists.rank). \(DailyBoxOfficeLists.movieNm)")
-                        .font(.title)
-                        .bold()
-                    Text("개봉일자: \(DailyBoxOfficeLists.openDt)")
-                        .font(.title2)
-                    Text("오늘 관객수: \(DailyBoxOfficeLists.audiCnt)명")
-                        .font(.title2)
-                    Text("누적 관객수: \(DailyBoxOfficeLists.audiAcc)명")
-                        .font(.title2)
+        ScrollView{
+            VStack(alignment: .leading) {
+                HStack {
+                    Spacer()
+                    Rectangle() // asyncImage로 영화 포스터 가져올 공간. APIKEY 기다리는중
+                        .frame(width: 270, height: 480)
+                        .foregroundColor(.black)
+                    Spacer()
                 }
-                Spacer()
+                Text("\(DailyBoxOfficeLists.rank). \(DailyBoxOfficeLists.movieNm)")
+                    .font(.title)
+                    .bold()
+                Text("개봉일자: \(DailyBoxOfficeLists.openDt)")
+                    .font(.title2)
+                Text("오늘 관객수: \(DailyBoxOfficeLists.audiCnt)명")
+                    .font(.title2)
+                Text("누적 관객수: \(DailyBoxOfficeLists.audiAcc)명")
+                    .font(.title2)
             }
-            Spacer()
             .padding()
+            .navigationTitle("영화 정보")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .padding()
-        .navigationTitle("영화 정보")
-        .navigationBarTitleDisplayMode(.inline)
     }
         
 }
