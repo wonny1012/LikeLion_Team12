@@ -70,10 +70,10 @@ struct UnkiView: View {
                                 .bold()
                             if Int(movies.rankInten)! < 0 {
                                 Text("(\(movies.rankInten))")
-                                    .foregroundStyle(.red)
+                                    .foregroundStyle(.blue)
                             } else if Int(movies.rankInten)! > 0 {
                                 Text("(+\(movies.rankInten))")
-                                    .foregroundStyle(.blue)
+                                    .foregroundStyle(.red)
                             } else {
                                 Text("(-)")
                             }
