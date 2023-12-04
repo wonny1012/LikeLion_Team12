@@ -14,7 +14,7 @@ struct UnkiView: View {
     
     var body: some View {
         NavigationView {
-            if !isLoadingData {
+            if !isLoadingData { // 오늘 뷰. 데이터 수집중
                 VStack {
                     DatePicker(
                         "",
@@ -39,7 +39,7 @@ struct UnkiView: View {
                     Spacer()
                 }
                 .padding()
-            } else if now > Date() {
+            } else if now > Date() { // 미래 뷰. 데이터 없음
                 VStack {
                     DatePicker(
                         "",
@@ -64,7 +64,7 @@ struct UnkiView: View {
                     Spacer()
                 }
                 .padding()
-            } else {
+            } else { // 진짜 뷰
                 List(DailyBoxOfficeLists, id: \.rank) { movies in
                     NavigationLink(destination: UnkiDetailView(DailyBoxOfficeLists: movies)) {
                         HStack {
