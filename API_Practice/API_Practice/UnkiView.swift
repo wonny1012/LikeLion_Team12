@@ -38,6 +38,7 @@ struct UnkiView: View {
                     Spacer()
                     Spacer()
                 }
+                .padding()
             } else if now > Date() {
                 VStack {
                     DatePicker(
@@ -49,7 +50,7 @@ struct UnkiView: View {
                         loadData()
                     }
                     HStack {
-                        Text("\("MM월dd일".stringFromDate(now: now)) 영화 순위")
+                        Text("\("MM월 d일".stringFromDate(now: now)) 영화 순위")
                             .font(.largeTitle)
                             .bold()
                         Spacer()
@@ -62,6 +63,7 @@ struct UnkiView: View {
                     Spacer()
                     Spacer()
                 }
+                .padding()
             } else {
                 List(DailyBoxOfficeLists, id: \.rank) { movies in
                     NavigationLink(destination: UnkiDetailView(DailyBoxOfficeLists: movies)) {
@@ -93,7 +95,7 @@ struct UnkiView: View {
                         loadData()
                     }
                 }
-                .navigationTitle("\("MM월dd일".stringFromDate(now: now)) 영화 순위")
+                .navigationTitle("\("MM월 d일".stringFromDate(now: now)) 영화 순위")
             }
         }
     }
